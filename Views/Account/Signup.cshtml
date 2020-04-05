@@ -1,0 +1,43 @@
+﻿@{
+    ViewData["Title"] = "Signup Page";
+}
+
+@model WebAdvert.Web.Models.Accounts.SignupViewModel
+
+<div class="row">
+    <div class="col-md-4">
+        <form method="post" asp-controller="Account" asp-action="Signup">
+            <h4>Create a new account</h4>
+            <hr />
+            <div asp-validation-summary="All" class="text-danger"></div>
+
+            <div class="form-group">
+                <label asp-for="Email"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Passport"></label>
+                <input asp-for="Passport" class="form-control" />
+                <span asp-validation-for="Passport" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="ConfirmPassword"></label>
+                <input asp-for="ConfirmPassword" class="form-control" />
+                <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="btn btn-default">Signup</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
